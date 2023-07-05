@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Details</title>
+</head>
+<body>
+    <form method="POST" action="edt">
+        {% csrf_token %}
+        <div>
+            <br>
+            <p>
+                <h3>Edit Details</h3>
+            </p>
+            <div>
+                Student ID:<br> <input type="text" name="id">
+                <br>
+            </div>
+            <div>
+                Student Name:<br> <input type="text" name="name">
+                <br>
+            </div>
+            <div>
+                Student Email:<br> <input type="email" name="email">
+                <br>
+            </div>
+            <div>
+                Student Contact:<br> <input type="text" name="contact">
+                <br>
+            </div>
+            <div>
+                <br>
+                <button type="submit">Submit</button>
+           </div>
+        </div>
+    </form>
+</body>
+</html>
