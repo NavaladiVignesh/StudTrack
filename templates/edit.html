@@ -4,35 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Details</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, black, #202020);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .glass {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 20px;
+            max-width: 400px;
+            width: 80%;
+        }
+        
+        .glass h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .glass input[type="text"],
+        .glass input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+        }
+        
+        .glass button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .glass button[type="submit"]:hover {
+            background-color: #0070ff;
+        }
+    </style>
 </head>
 <body>
     <form method="POST" action="edt">
         {% csrf_token %}
-        <div>
+        <div class="glass">
+            <h3>Edit Details</h3>
+            <div>
+                Student ID:<br>
+                <input type="text" name="id">
+            </div>
+            <div>
+                Student Name:<br>
+                <input type="text" name="name">
+            </div>
+            <div>
+                Student Email:<br>
+                <input type="email" name="email">
+            </div>
+            <div>
+                Student Contact:<br>
+                <input type="text" name="contact">
+            </div>
             <br>
-            <p>
-                <h3>Edit Details</h3>
-            </p>
-            <div>
-                Student ID:<br> <input type="text" name="id">
-                <br>
-            </div>
-            <div>
-                Student Name:<br> <input type="text" name="name">
-                <br>
-            </div>
-            <div>
-                Student Email:<br> <input type="email" name="email">
-                <br>
-            </div>
-            <div>
-                Student Contact:<br> <input type="text" name="contact">
-                <br>
-            </div>
-            <div>
-                <br>
-                <button type="submit">Submit</button>
-           </div>
+            <button type="submit">Submit</button>
         </div>
     </form>
 </body>
