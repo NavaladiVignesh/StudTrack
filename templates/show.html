@@ -6,52 +6,37 @@
     <title>Student Records</title>
     <style>
         body {
-            background: linear-gradient(45deg, black, #202020);
-            color: white;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
         }
-        
-        th, td {
+
+        thead th {
+            background-color: #f1f1f1;
             padding: 10px;
             text-align: left;
         }
-        
-        th {
-            background-color: rgba(0, 0, 0, 0.7);
+
+        tbody td {
+            padding: 10px;
         }
-        
-        tr:nth-child(even) {
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        
-        tr:hover {
-            background-color: rgba(0, 112, 255, 0.3);
-        }
-        
+
         form {
             display: inline-block;
         }
-        
+
         input[type="submit"] {
-            background-color: black;
+            background-color: #4CAF50;
             color: white;
+            padding: 8px 16px;
             border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        input[type="submit"]:hover {
-            background-color: #0070ff;
         }
     </style>
 </head>
